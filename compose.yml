@@ -25,7 +25,7 @@ services:
   darthvader:
     build: dnsserver
     hostname: darthvader
-    command: -g -4
+    command: -g -4 -u root
     volumes:
       - ./darthvader/named.conf.options:/etc/bind/named.conf.options
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local
@@ -47,7 +47,21 @@ services:
       - ./dnsserver/root.hints:/usr/share/dns/root.hints      
     networks:
       rededns:
-        ipv4_address: 192.168.20.11        
+        ipv4_address: 192.168.20.11
+  mandalorian:
+    build: dnsserver
+    hostname: mandalorian
+    command: -g -4 -u root
+    depends_on:
+      - darthvader
+    volumes:
+      - ./mandalorian/named.conf.options:/etc/bind/named.conf.options
+      - ./mandalorian/named.conf.local:/etc/bind/named.conf.local
+      - ./mandalorian/zonas:/var/cache/bind
+      - ./logs:/logs
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.12  
   delegado:
     build: dnsserver
     hostname: delegado
