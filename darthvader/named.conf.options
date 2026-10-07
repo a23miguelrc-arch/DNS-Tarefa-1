@@ -1,0 +1,20 @@
+options {
+        directory "/var/cache/bind";
+
+        // Permite la recursión para la red local/loopback
+        recursion yes;
+        allow-query { any; };
+        allow-recursion { any; };
+
+        // Servidores a los que reenviar si no tiene la respuesta
+        forwarders {
+                8.8.8.8;
+                1.1.1.1;
+        };
+
+        // Si usas DNSSEC y da problemas de validación local en Docker, prueba provisionalmente con 'auto' o 'no'
+        dnssec-validation auto;
+
+        listen-on { any; };
+        listen-on-v6 { any; };
+};

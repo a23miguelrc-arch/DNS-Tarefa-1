@@ -32,6 +32,8 @@ services:
       - ./darthvader/zonas:/var/cache/bind
       - ./dnsserver/root.hints:/usr/share/dns/root.hints
       - ./logs:/logs
+      - ./darthvader/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
+      - ./darthvader/zonas/db.192:/etc/bind/db.192
     networks:
       rededns:
         ipv4_address: 192.168.20.10
@@ -62,19 +64,19 @@ services:
     networks:
       rededns:
         ipv4_address: 192.168.20.12  
-  delegado:
-    build: dnsserver
-    hostname: delegado
-    depends_on:
-      - darthvader    
-    volumes:
-      - ./delegado/named.conf.options:/etc/bind/named.conf.options
-      - ./delegado/named.conf.local:/etc/bind/named.conf.local
-      - ./delegado/db.imperio.starwars.lan:/etc/bind/db.imperio.starwars.lan
-      - ./dnsserver/root.hints:/usr/share/dns/root.hints
-    networks:
-      rededns:
-        ipv4_address: 192.168.20.50        
+  # delegado:
+  #   build: dnsserver
+  #   hostname: delegado
+  #   depends_on:
+  #     - darthvader    
+  #   volumes:
+  #     - ./delegado/named.conf.options:/etc/bind/named.conf.options
+  #     - ./delegado/named.conf.local:/etc/bind/named.conf.local
+  #     - ./delegado/db.imperio.starwars.lan:/etc/bind/db.imperio.starwars.lan
+  #     - ./dnsserver/root.hints:/usr/share/dns/root.hints
+  #   networks:
+  #     rededns:
+  #       ipv4_address: 192.168.20.50        
   cliente:
     build: cliente
     hostname: cliente1
@@ -87,7 +89,7 @@ services:
       - ./cliente/actualiza.txt:/etc/bind/actualiza.txt
     dns: 
     - 192.168.20.10
-    - 192.168.20.11
+    - 192.168.20.12
 
 networks:
   rededns:

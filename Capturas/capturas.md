@@ -30,4 +30,4 @@ options {
 	listen-on-v6 { any; };
 };
 
-![alt text](apartado2.png)
+![alt text](apartado2.png)![alt text](image.png)
