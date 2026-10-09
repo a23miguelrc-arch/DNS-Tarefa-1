@@ -45,7 +45,7 @@ services:
       - darthvader
       - mandalorian
     volumes:
-      - ./darthsidious/named.conf.options:/etc/bind/named.conf.options
+      - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
       - ./dnsserver/root.hints:/usr/share/dns/root.hints      
     networks:

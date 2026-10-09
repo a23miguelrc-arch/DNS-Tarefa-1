@@ -1,8 +1,10 @@
 zone "starwars.lan"{
     type primary;
     file "/etc/bind/db.starwars.lan";
+    allow-transfer {192.168.20.11; };
 };
 zone "db.20.168.192.in-addr.arpa"{
     type primary;
-    file "/etc/bind/db.192";  
+    file "/etc/bind/db.192";
+    allow-transfer {192.168.20.11; };  
 };
