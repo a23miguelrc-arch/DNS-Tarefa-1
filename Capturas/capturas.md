@@ -168,3 +168,9 @@ lenda.starwars.lan	text = "Que a forza te acompa\195\177e"
    
 nslookup 192.168.20.11 localhost
 
+root@darthvader:/var/cache/bind# nslookup 192.168.20.11 localhost
+11.20.168.192.in-addr.arpa	name = dns-tarefa-1-darthsidious-1.dns-tarefa-1_rededns.
+
+Authoritative answers can be found from:
+
+
