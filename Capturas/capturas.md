@@ -181,3 +181,6 @@ Authoritative answers can be found from:
 ![alt text](apartado1_Tarefa_1.3_3.png)
 ![alt text](apartado1_Tarefa_1.3_4.png)
 2.Engade un rexistro tipo A (Chewbacca 192.168.20.28) na zona de resolución directa e tamén na de resolución inversa.  Fai unha captura no momento do reinicio do equipo darthvader, no que se vexa o log dos dous equipos e que se amose que se fixo a transferencia de zona. Adxunta tamén unha captura do ficheiro de zona no servidor secundario.
+![alt text](apartado2_Tarefa_1.3.png)
+![alt text](apartado2_Tarefa_1.3_2.png)
+![alt text](apartado2_Tarefa_1.3_3.png)

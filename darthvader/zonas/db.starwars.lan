@@ -1,6 +1,6 @@
 $TTL    86400
 @       IN      SOA     darthvader.starwars.lan. admin.starwars.lan. (
-                        2025100701  ; Número de serie
+                        2025100702  ; Número de serie
                         3600        ; Actualización (Refresh)
                         1800        ; Reintento (Retry)
                         1209600     ; Caducidade (Expire)
@@ -22,4 +22,4 @@ c3p0           IN      A       192.168.20.26
 palpatine      IN      CNAME   darthsidious.starwars.lan.
 @              IN   MX  10   c3p0.starwars.lan.
 lenda          IN   TXT     "Que a forza te acompañe"
-chewbacca     IN       A        192.168.20.28         
+chewbacca     IN       A        192.168.20.30         

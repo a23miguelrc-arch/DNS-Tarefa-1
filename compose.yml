@@ -25,6 +25,8 @@ services:
   darthvader:
     build: dnsserver
     hostname: darthvader
+    depends_on:
+      - mandalorian
     command: -g -4 -u root
     volumes:
       - ./darthvader/named.conf.options:/etc/bind/named.conf.options
@@ -43,6 +45,7 @@ services:
     hostname: darthsidious
     depends_on:
       - darthvader
+      - mandalorian
     volumes:
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
@@ -54,8 +57,6 @@ services:
     build: dnsserver
     hostname: mandalorian
     command: -g -4 -u root
-    depends_on:
-      - darthvader
     volumes:
       - ./mandalorian/named.conf.options:/etc/bind/named.conf.options
       - ./mandalorian/named.conf.local:/etc/bind/named.conf.local
