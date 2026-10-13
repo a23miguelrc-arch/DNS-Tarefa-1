@@ -1,3 +1,4 @@
+### 1.1 Instalación de zonas mestras primarias
 1. Instala o servidor BIND9 no equipo darthvader. Comproba que xa funciona coma servidor DNS caché pegando no documento de entrega a saída deste comando dig @localhost xunta.gal 
 ![alt text](apartado1.png)
 2. Configura o servidor BIND9 no equipo mandalorian para que empregue como reenviador a darthvader pegando no documento de entrega contido do ficheiro /etc/bind/named.conf.options e a saída deste comando: dig @localhost santiagodecompostela.gal.
@@ -173,4 +174,10 @@ root@darthvader:/var/cache/bind# nslookup 192.168.20.11 localhost
 
 Authoritative answers can be found from:
 
-
+### 1.3 Instalación de zonas secundarias.
+1.Tomaremos a máquina darthsidious, e configuraremola para ser servidor secundario, tanto da zona primaria de resolución directa como de resolución inversa. Captura os ficheiros de configuración en ambalas dúas máquinas. Fai unha captura onde se vexa o reinicio da máquina darthsidious, no que se vexa no log dos dous equipos e que se fixo a transferencia de zona.
+![alt text](apartado1_Tarefa_1.3.png)
+![alt text](apartado1_Tarefa_1.3_2.png)
+![alt text](apartado1_Tarefa_1.3_3.png)
+![alt text](apartado1_Tarefa_1.3_4.png)
+2.Engade un rexistro tipo A (Chewbacca 192.168.20.28) na zona de resolución directa e tamén na de resolución inversa.  Fai unha captura no momento do reinicio do equipo darthvader, no que se vexa o log dos dous equipos e que se amose que se fixo a transferencia de zona. Adxunta tamén unha captura do ficheiro de zona no servidor secundario.

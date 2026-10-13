@@ -43,7 +43,6 @@ services:
     hostname: darthsidious
     depends_on:
       - darthvader
-      - mandalorian
     volumes:
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
