@@ -181,6 +181,17 @@ Authoritative answers can be found from:
 ![alt text](apartado1_Tarefa_1.3_3.png)
 ![alt text](apartado1_Tarefa_1.3_4.png)
 2.Engade un rexistro tipo A (Chewbacca 192.168.20.28) na zona de resolución directa e tamén na de resolución inversa.  Fai unha captura no momento do reinicio do equipo darthvader, no que se vexa o log dos dous equipos e que se amose que se fixo a transferencia de zona. Adxunta tamén unha captura do ficheiro de zona no servidor secundario.
-![alt text](apartado2_Tarefa_1.3.png)
-![alt text](apartado2_Tarefa_1.3_2.png)
-![alt text](apartado2_Tarefa_1.3_3.png)
+Darthvader:
+![alt text](mensaje_notificacion_darthvader.png)
+Darthsidious:
+![alt text](mensaje_notificacion_darthsidious.png)
+![alt text](zonas_darthsidious.png)
+3.Comproba que o servidor secundario pode resolver ese nome.
+![alt text](resolucion_do_nombre.png)
+4.Fai os cambios necesarios para que as trasferencias se fagan de forma segura empregando chaves.  Repite as capturas e vídeos do punto 2, engadindo o rexistro r2d2 (192.168.20.29)
+Darthvader:
+![alt text](clave_darthvader.png)
+Darthsidious:
+![alt text](clave_darthsidious.png)
+Comprobación de resolucion en Darthsidious:
+![alt text](resolucion_r2d2.png)

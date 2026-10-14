@@ -1,10 +1,14 @@
+key "clave-starwars" {
+	algorithm hmac-sha256;
+	secret "HCRPE61c9lbpQCSTY/7bjOm5AT7lpiA4sDM+6Z8ZGR4=";
+};
 zone "starwars.lan"{
     type primary;
     file "/etc/bind/db.starwars.lan";
-    allow-transfer {192.168.20.11; };
+    allow-transfer {key "clave-starwars"; };
 };
 zone "20.168.192.in-addr.arpa"{
     type primary;
     file "/etc/bind/db.192";
-    allow-transfer {192.168.20.11; };  
+    allow-transfer {key "clave-starwars"; };  
 };

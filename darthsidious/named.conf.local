@@ -1,3 +1,12 @@
+key "clave-starwars" {
+	algorithm hmac-sha256;
+	secret "HCRPE61c9lbpQCSTY/7bjOm5AT7lpiA4sDM+6Z8ZGR4=";
+};
+
+server 192.168.20.10{
+    keys {"clave-starwars";};
+};
+
 zone "starwars.lan"{
     type secondary;
     file "/var/cache/bind/db.starwars.lan";
